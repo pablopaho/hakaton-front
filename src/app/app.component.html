@@ -1,12 +1,19 @@
-<div style="text-align:center">
-  <h1>
-    Welcome to {{ title }}!
-  </h1>
-  <button type="button" (click)="increment()">Crear paciente</button>
-  <button type="button" (click)="decrement()">Crear médico</button>
-  <button type="button" (click)="crearHistoria()">Crear historia</button>
-  <input type="text" name="count" [value]="counterService.count" style="width: 450px; text-align: center;">
-  <br>
-  <label>Last Transaction ID</label>
-  <input type="text" name="transaction" [value]="counterService.lastTransactionID" style="width: 500px;  text-align: center;">
+<div class="container">
+  <div class="row">
+    <div class="input-field col s12 m12 l12">
+      <input id="lastTransactionID" type="text" placeholder="Last Transaction ID" name="transaction" [value]="counterService.lastTransactionID" >
+    </div>
+    <label></label>
+    <input style="width: 500px;  text-align: center;">
+  </div>
+  <div class="row col s12 m12 l12">
+    <button type="button" class="waves-effect waves-light btn" (click)="increment()">Crear paciente</button>
+    <button type="button" class="waves-effect waves-light btn" (click)="decrement()">Crear médico</button>
+    <button type="button" class="waves-effect waves-light btn" (click)="crearHistoria()">Crear historia</button>
+  </div>
+  <div>
+    <div class="input-field col s12 m12 l12">
+      <input id="lastTransactionID" type="text" name="count" [value]="counterService.count">
+    </div>
+  </div>
 </div>
